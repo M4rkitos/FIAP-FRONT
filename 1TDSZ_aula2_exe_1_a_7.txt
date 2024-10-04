@@ -1,0 +1,183 @@
+Aula 2
+
+1) 
+Entidades
+	MAE
+		codigo_mae
+		nome
+		endereco
+		data_nascimento
+		telefone
+	
+	BEBE
+		codigo_bebe
+		nome
+		data_nascimento
+		peso
+		altura
+	
+	MEDICO
+		crm
+		nome
+		espcialidade
+		telefone
+		
+Relacionamentos
+	Uma mãe pode ter o nascimento de 1 ou 0 bebê
+	Um bebê deve nascer de 1 e somente 1 mãe
+	Um médico pode fazer o parto 0 ou N bebês
+	Um bebê deve ter o parto por 1 ou N medicos
+	
+
+2) 
+Entidades
+	CLIENTE
+		cod_cliente
+		rg
+		nome
+		telefone
+		endereco
+	
+	PEDIDO
+		cod_pedido
+		data
+		valor_total
+		
+	PRODUTO
+		cod_produto
+		nome
+		tipo
+		preco
+		qtd_estoque
+		
+Relacionamentos
+	Um cliente realiza 0 ou N pedidos
+	Um pedido deve ser realizado por 1 e somente 1 cliente
+	Um pedido de conter 1 ou N produto
+	um produto pode constar em 0 ou N pedido.
+	
+
+3)
+Entidades
+	SALA
+		cod_sala
+	
+	TURMA
+		cod_turma
+		
+	AULA 
+		cod_aula
+		
+	PROFESSOR 
+		cod_professor
+		
+Relacionamentos
+	Uma sala é alocada para 0 ou N turma
+	Uma turma é alocada em 1 e somente 1 sala
+	Uma turma assiste 1 ou N aula
+	Uma aula é assistida por 1 ou N turma
+	Uma aula é ministrada por 1 e somente 1 professor
+	Um professor ministra 1 ou N aula
+	
+4)
+Entidades
+	CATEGORIA
+		codigo
+		descricao
+	
+	LIVRO
+		isbn
+		titulo
+		ano
+		
+	AUTOR
+		cod_autor
+		nome
+		nacionalidade
+		
+Relacionamentos
+	Uma categoria pertence 0 ou N livro
+	Um livro pertece a 1 e somente 1 categoria
+	Um livro é escrito por 1 ou N Autor
+	Um autor escreve 1 ou N livro
+	
+5)
+Entidades
+	CATEGORIA
+		cod_categoria
+		nome
+		classificacao
+	
+	PRODUTO
+		codigo
+		nome
+		
+	PEDIDO
+		numero
+		data
+		
+	CLIENTE
+		cod_cliente
+		status
+		telefone
+		endereco
+		nome
+
+Relacionamentos
+	Uma categoria pertence 0 ou N produto
+	Um produto pertence a 1 ou somente 1 categoria
+	Um produto contem em 0 ou N pedido
+	Um pedido contem 1 ou N produto
+	Um pedido é realizado por 1 e somente 1 cliente
+	Um cliente realiza 0 ou N pedido.
+
+	
+6)Entidades
+	DEPARTAMENTO
+		cod_dep
+	
+	DIRETORIA
+		cod_dir
+		
+	FUNCIONARIO
+		cod_func
+		
+	DEPENDENTE (GENERALIZADA)
+		cod_dep
+		
+	DEP_FUNCIONARIO (ESPECIALIZADA)
+		cod_df
+		
+	DEP_NAO_FUNCIONARIO (ESPECIALIZADA)
+		cod_dnf
+		
+Relacionamentos
+	Uma Diretoria faz parte de 1 ou N departamento
+	Um departamento faz parte de 1 e somente 1 diretoria
+	Um departamento é locado por 1 ou N funcionario
+	Um funcionario é locado em 1 e somente 1 departmento
+	Um funcionário tem 0 ou N dependente
+	Um dependente é de 1 e somente 1 dependente
+	Um funcionário é 0 ou N dep_funcionario
+	um dep_funcionario é 1 e somente 1 funcionário
+	
+	
+7) Entidades
+	DEPARTAMENTO
+		cod_dep
+	
+	PROJETO
+		cod_proj
+		
+	EMPREGADO
+		num_emp
+		
+Relacionamentos
+	Um departamento é coordena 0 ou N projeto
+	Um projeto é coordenado por 1 e somente 1 departamento
+	um departamento aloca 0 ou N empregado
+	um empregado é alocado em 1 e somente 1 departamento
+	um projeto é participado por 1 ou N empregado
+	Um empregado participa de 1 ou N projeto
+	Um empregado pode ser 0 ou 1 chefe
+	um empregado pode ser chefe de 1 ou N empregado
